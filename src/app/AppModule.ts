@@ -1,7 +1,7 @@
 import {Component, NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
 import {CommonModule} from "@angular/common";
-import {LoggingModule} from "./LoggingModule";
+import {NgLoggingModule} from "./NgLoggingModule";
 
 @Component({
     selector: 'app',
@@ -21,7 +21,7 @@ export class AppComponent {
     imports     : [
         BrowserModule,
         CommonModule,
-        LoggingModule
+        NgLoggingModule
     ],
     exports     : [AppComponent],
     providers   : [],

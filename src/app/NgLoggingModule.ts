@@ -1,18 +1,18 @@
 import {ModuleWithProviders, NgModule} from '@angular/core';
 import {EventLogger, EventLoggerConfig} from "./Service/EventLogger";
-import {CoreModule} from "@ng-app-framework/core";
+import {NgCoreModule} from "@ng-app-framework/core";
 
 
 @NgModule({
     imports  : [
-        CoreModule
+        NgCoreModule
     ],
     providers: [
         EventLogger,
         EventLoggerConfig
     ]
 })
-export class LoggingModule {
+export class NgLoggingModule {
 
     constructor(logger: EventLogger) {
 
@@ -20,7 +20,7 @@ export class LoggingModule {
 
     static forRoot(logToConsole: boolean): ModuleWithProviders {
         return {
-            ngModule : LoggingModule,
+            ngModule : NgLoggingModule,
             providers: [
                 {
                     provide : EventLoggerConfig,
